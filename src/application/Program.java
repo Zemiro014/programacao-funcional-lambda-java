@@ -29,11 +29,10 @@ public class Program {
 			};
 		*/
 		
-		// Usando expressões mais enxuto, ou seja expressões lambda
+		// Usando versão do Lambda mais simplificada
 		// (p1, p2) -> : é assim que se define de forma enxuta uma função anonima
-		Comparator<Product> comp02 = (p1, p2) ->{
-			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		};
+		// p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()) : implementação ada funçao anonima
+		Comparator<Product> comp02 = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 		
 		list.sort(comp02);
 		
