@@ -20,7 +20,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 		
 		// Usando o predicate por referência de método (refrence method)
-		list.removeIf(Product::staticProductPredicate);
+		list.removeIf(Product::nonStaticProductPredicate);
 		
 		for(Product p : list) {
 			System.out.println(p);
