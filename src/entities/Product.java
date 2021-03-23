@@ -3,7 +3,7 @@ package entities;
 public class Product {
 
 	private String name;
-	private double price;
+	private Double price;
 	
 	public Product(){
 	}
@@ -29,7 +29,7 @@ public class Product {
 		return name;
 	}
 	
-	public double getPrice() 
+	public Double getPrice() 
 	{
 		return price;
 	}
