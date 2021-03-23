@@ -32,9 +32,10 @@ public class Program {
 		// Usando versão do Lambda mais simplificada
 		// (p1, p2) -> : é assim que se define de forma enxuta uma função anonima
 		// p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()) : implementação ada funçao anonima
-		Comparator<Product> comp02 = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+		// Comparator<Product> comp02 = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 		
-		list.sort(comp02);
+		// Usar comparator na forma de Lambda como argumento
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 		
 		for(Product p : list) {
 			System.out.println(p);
