@@ -19,9 +19,9 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		list.add(new Product("HD Case", 80.90));
 		
-		// Usando o predicate na forma de expressão declarada
+		// Usando o predicate na forma de Lambda inline: colocar a expressão Lambda como parâmetro
 		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
-		list.removeIf(pred);
+		list.removeIf(p -> p.getPrice() >= 100.0);
 		
 		for(Product p : list) {
 			System.out.println(p);
